@@ -15,5 +15,24 @@
     </head>
     <body>
         <h1>Shopping List</h1>
+        <span>Hello, ${username} ${two}</span>
+        <a href="ShoppingList?action=logout">Logout</a>
+        
+        <form action="" method="post">
+            <h2>List</h2>
+            Add item: <input type="text" name="item"><input type="submit" value="Add Item">
+            <input type="hidden" name="action" value="add">
+        </form>
+        
+        <form action="" method="post">
+            <ul>
+                <c:forEach var="item" items="${itemsList}">
+                    <li><input type="radio" name="item" value="<c:out value='${item}' />"><c:out value='${item}' /></li>
+                </c:forEach>
+            </ul>
+            <input type="submit" value="Delete">
+            <input type="hidden" name="action" value="delete">
+        </form>
+        
     </body>
 </html>
