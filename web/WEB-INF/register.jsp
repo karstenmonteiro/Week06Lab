@@ -17,6 +17,7 @@
             Username: <input type="text" name="username">
             <input type="hidden" name="action" value="register">
             <input type="submit" value="Register name">
+            <span style="color: #ff0000;">${errorMsg}</span>
         </form>
     </body>
 </html>
